@@ -9,6 +9,7 @@ const fi = (function() {
       for (var i = 0; i < newCollection.length; i++) {
         callback(newCollection[i])
       }
+      return collection
     },
 
     map: function() {
