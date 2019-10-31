@@ -9,14 +9,14 @@ const fi = (function() {
       for (let i=0; i < newCollection.length; i++) {
         callback(newCollection[i])
       }
-      
+
       return collection
     },
 
     map: function(collection, callback) {
       let newCollection = (collection instanceof Array) ? collection : Object.values(collection)
       return newCollection.map(callback)
-      
+
     },
 
     reduce: function(c = [], callback = () => {}, acc) {
@@ -131,25 +131,25 @@ const fi = (function() {
       }
     },
 
-    
+
     first: function(collection) {
         return collection[0];
     },
-    
+
     keys: function(obj) {
       let keys = [];
       Object.keys(obj).map((obj) => keys.push(obj));
-    
+
       return keys;
     },
-    
+
     values: function(obj) {
       let values = [];
       Object.values(obj).map((obj) => values.push(obj));
-    
+
       return values;
     },
-    
+
     functions: function(obj) {
       const functionNames = []
 
