@@ -12,8 +12,9 @@ const fi = (function() {
       return collection
     },
 
-    map: function() {
-
+    map: function(collection, callback) {
+      let newCollection = (collection instanceof Array) ? collection : Object.values(collection)
+      return newCollection.map(callback)
     },
 
     reduce: function() {
